@@ -1,17 +1,20 @@
 "use client";
 
 import Image from "@/node_modules/next/image";
+import { useRouter } from "next/navigation";
 
+const Logo = () => {
+  const router = useRouter();
 
-interface ContainerProps {
-  children: React.ReactNode;
-}
-
-const Container: React.FC<ContainerProps> = ({
-  children
-}) => {
   return (
-);
-}
+    <Image
+      alt="Logo"
+      className="hidden md:block cursor-pointer"
+      height="100"
+      width="100"
+      src="/images/logo.png"
+    />
+  );
+};
 
-export default Container;
+export default Logo;
